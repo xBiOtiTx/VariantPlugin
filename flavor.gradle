@@ -1,0 +1,21 @@
+apply plugin: FlavorPlugin
+
+class FlavorPlugin implements Plugin<Project> {
+    void apply(Project project) {
+        def books = project.container(Book)
+        project.extensions.books = books
+    }
+}
+
+class GreetingPluginExtension {
+    def String message = 'Hello from GreetingPlugin'
+}
+
+class Book {
+    final String name
+    File sourceFile
+
+    Book(String name) {
+        this.name = name
+    }
+}
