@@ -67,9 +67,14 @@ configurations.all {
     println it.name
 }
 
+// TODO перенести в генерацию сорцсетов
+configurations.developCompile.extendsFrom configurations.compile
+configurations.developTestCompile.extendsFrom configurations.testCompile
+configurations.developTestCompile.extendsFrom configurations.developCompile
+
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
     compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
-    developCompile group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
-    developTestCompile group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
+    //developCompile group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
+    //developTestCompile group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
 }
