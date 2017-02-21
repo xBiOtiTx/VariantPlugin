@@ -52,6 +52,7 @@ class VariantPlugin implements Plugin<Project> {
 
             final SourceSet sourceSetTest = sourceSets.create(it.name + 'Test')
             sourceSetTest.setCompileClasspath(project.files(sourceSet.getOutput(), project.getConfigurations().getByName(it.name + 'TestCompileClasspath')));
+            sourceSetTest.setRuntimeClasspath(project.files(sourceSetTest.getOutput(), sourceSet.getOutput(), project.getConfigurations().getByName(it.name + 'TestCompileClasspath'))); // or + 'TestRuntime'?
             // test.setRuntimeClasspath(project.files(test.getOutput(), main.getOutput(), project.getConfigurations().getByName(TEST_RUNTIME_CLASSPATH_CONFIGURATION_NAME))); // TODO разобраться что за рантайм класпас такой
 
             final Distribution distribution = distributions.create(it.name)
