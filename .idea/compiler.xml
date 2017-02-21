@@ -22,6 +22,7 @@
       <module name="buildSrc_main" target="1.8" />
       <module name="buildSrc_test" target="1.8" />
       <module name="gradle_develop" target="1.8" />
+      <module name="gradle_developTest" target="1.8" />
       <module name="gradle_dist0" target="1.8" />
       <module name="gradle_dist1" target="1.8" />
       <module name="gradle_dist2" target="1.8" />
@@ -37,6 +38,8 @@
       <module name="gradle_source1" target="1.8" />
       <module name="gradle_source2" target="1.8" />
       <module name="gradle_sourorg.gradle.api.internal.ExtensibleDynamicObject@4c87ec7e" target="1.8" />
+      <module name="gradle_super" target="1.8" />
+      <module name="gradle_supermain" target="1.8" />
       <module name="gradle_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>

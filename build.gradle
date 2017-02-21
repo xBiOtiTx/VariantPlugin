@@ -1,34 +1,75 @@
+import ru.sbrf.gradle.plugins.KubernetesUtils
+
 group 'ru.sbrf.test'
 version '1.0-SNAPSHOT'
 
-//apply from: 'plugin.gradle'
+apply plugin: 'ru.sbrf.gradle.plugins.VariantPlugin'
 
-apply plugin: 'java'
-apply plugin: 'application'
-
-
-mainClassName = "ru.sbrf.test.Main"
-
-greeting {
-    message = 'Hi from Gradle'
+variants {
+    develop
 }
 
-//books {
-//    book1
-//    book2
-//    book3
-//}
-//
-//task printBooks << {
-//    books.each {
-//        println it.name
-//    }
-//}
 repositories {
     mavenCentral()
+}
+
+task emptyTask << {
+    sourceSets.all {
+        println ""
+        println it.name
+        println "runtimeClasspath"
+        it.runtimeClasspath.each {
+            println it
+        }
+        println "---"
+
+        println "compileClasspath"
+        it.compileClasspath.each {
+            println it
+        }
+
+    }
+
+//    println 'emptyTask' + ru.sbrf.gradle.plugins.KubernetesUtils.foo()
+//
+//    sourceSets.all {
+//        println "==================="
+//
+//        println it.name
+//
+//        println "***"
+//        it.allJava.each {
+//            println it
+//        }
+//        println "***"
+//        (sourceSets.main.allJava + it.allJava).each {
+//            println it
+//        }
+//        println "***"
+//        (it.allJava - sourceSets.main.allJava).each {
+//            println it
+//        }
+//        println "***"
+//        (sourceSets.main.allJava - it.allJava).each {
+//            println it
+//        }
+//        println "***"
+//
+//        it.output.each {
+//            println it
+//        }
+//
+//        println "==================="
+//    }
+}
+
+configurations.all {
+    println it.name
 }
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
     compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
+    developCompile group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
+    developTestCompile group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
 }

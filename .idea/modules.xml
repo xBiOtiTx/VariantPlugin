@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/buildSrc.iml" filepath="$PROJECT_DIR$/.idea/modules/buildSrc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/buildSrc_main.iml" filepath="$PROJECT_DIR$/.idea/modules/buildSrc_main.iml" group="buildSrc" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/buildSrc_test.iml" filepath="$PROJECT_DIR$/.idea/modules/buildSrc_test.iml" group="buildSrc" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/gradle.iml" filepath="$PROJECT_DIR$/.idea/modules/gradle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gradle_develop.iml" filepath="$PROJECT_DIR$/.idea/modules/gradle_develop.iml" group="gradle" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gradle_developTest.iml" filepath="$PROJECT_DIR$/.idea/modules/gradle_developTest.iml" group="gradle" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/gradle_main.iml" filepath="$PROJECT_DIR$/.idea/modules/gradle_main.iml" group="gradle" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gradle_supermain.iml" filepath="$PROJECT_DIR$/.idea/modules/gradle_supermain.iml" group="gradle" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/gradle_test.iml" filepath="$PROJECT_DIR$/.idea/modules/gradle_test.iml" group="gradle" />
     </modules>
   </component>
